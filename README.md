@@ -65,19 +65,19 @@ Welcome to *HelpingHands, a beautifully designed, beginner-friendly, and powerfu
 ## 📸 Screenshots
 
 > You can add some screenshots here like:
-> 
+
 
 - 📦 Sign Up Page
 - ![image](https://github.com/user-attachments/assets/8807beec-968e-48f4-a4bc-1c850110b00c)
 
 - 🖼 Admin Dashboard
-- ![image](https://github.com/user-attachments/assets/f6f59370-f2dd-4402-bc6a-28a2f89e76da)
+  ![image](https://github.com/user-attachments/assets/f6f59370-f2dd-4402-bc6a-28a2f89e76da)
 
 - 📋 Inventory Form
-- ![image](https://github.com/user-attachments/assets/33f703ff-d4e4-420e-8564-7bdc29d7a5ba)
+ ![image](https://github.com/user-attachments/assets/33f703ff-d4e4-420e-8564-7bdc29d7a5ba)
 
 - 👥 Volunteer List
-- ![image](https://github.com/user-attachments/assets/9cade7e0-8da8-49a3-99b4-147ccd98f318)
+ ![image](https://github.com/user-attachments/assets/9cade7e0-8da8-49a3-99b4-147ccd98f318)
 
 ---
 
