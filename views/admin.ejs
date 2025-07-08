@@ -1,0 +1,167 @@
+<%- include("partials/header") %>
+
+<!-- cards -->
+<div class="container text-center my-5">
+    <div class="mb-4" data-aos="fade-down">
+    <h1 class="display-5 fw-semibold text-dark" style="margin-top: 40px;" data-aos="fade-down">Admin Dashboard</h1>
+    <p class="lead fst-italic text-muted" style="font-family: Georgia, serif;">Empowering every donation. Managing every heartbeat of hope.</p>
+    </div>
+    <div class="row g-4">
+
+
+    <!-- inventory -->
+     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <a href="/admin/inventory" class="text-decoration-none text-dark">
+            <div class="card card-hover shadow">
+                <img src="/images/inventory.jpg" class="card-img-top" alt="Inventory Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Inventory</h5>
+                    <p class="card-text">Manage all stock entries and distribution records. </p>
+                </div> 
+            </div>
+        </a>
+     </div>
+
+    <!-- Donations -->
+     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="/admin/donations" class="text-decoration-none text-dark">
+            <div class="card card-hover shadow">
+                <img src="/images/donation.jpg" class="card-img-top" alt="Donations Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Donations</h5>
+                    <p class="card-text">View and manage money, food, clothes, books donations.</p>
+                </div> 
+            </div>
+        </a>
+     </div>
+
+    <!-- Volunteers -->
+     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <a href="/admin/volunteers" class="text-decoration-none text-dark">
+            <div class="card card-hover shadow">
+                <img src="/images/volunteer.jpg" class="card-img-top" alt="Volunteers Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Volunteers</h5>
+                    <p class="card-text">Explore volunteer registrations and active teams, </p>
+                </div> 
+            </div>
+        </a>
+     </div>
+
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4"
+         data-aos="zoom-in" data-aos-delay="100">
+         <div class="card shadow-lg border-0 h-100 text-center" style=" transition: transform 0.3s;"
+        onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" class="card-img-top p-4" alt="Analytics image" style="height: 180px; object-fit:contain;">
+            <div class="card-body">
+            <h5 class="card-title">Analytics Dashboard</h5>
+            <p class="card-text">View total stats, donations, users & insights</p>
+            <a href="/admin/go" class="btn btn-outline-primary">View Analytics</a>
+        </div>
+        </div>
+        </div>
+      </div>
+      </div>
+
+     
+
+      <!-- Quick Stats Panel -->
+    <div class="container mt-5 pt-5" data-aos="fade-up" >
+  <h4 class="fw-bold mb-4 text-center text-success" style="font-size: 1.8rem;">
+    <i class="fas fa-chart-bar me-3" style="font-size: 2rem;"></i> Quick Stats
+  </h4>
+  
+  <div class="row g-4">
+    <!-- Donations -->
+    <div class="col-md-4">
+      <div class="p-4 rounded shadow-sm bg-light border-start border-4 border-danger h-100 lift-on-hover">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-donate fa-2x text-danger me-3"></i>
+          <div>
+            <h6 class="mb-1">Total Donations</h6>
+            <h5 class="fw-bold text-danger">243</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Volunteers -->
+    <div class="col-md-4">
+      <div class="p-4 rounded shadow-sm bg-light border-start border-4 border-primary h-100 lift-on-hover">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-user-friends fa-2x text-primary me-3"></i>
+          <div>
+            <h6 class="mb-1">Total Volunteers</h6>
+            <h5 class="fw-bold text-primary">67</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inventory -->
+    <div class="col-md-4">
+      <div class="p-4 rounded shadow-sm bg-light border-start border-4 border-warning h-100 lift-on-hover">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-boxes fa-2x text-warning me-3"></i>
+          <div>
+            <h6 class="mb-1">Inventory Items</h6>
+            <h5 class="fw-bold text-warning">128</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- why helpinghand -->
+
+<section class="container py-5 mt-5 pt-5">
+    <h2 class="text-center mb-5 fw-bold">Why HelpingHands?</h2>
+    <div class="row text-center g-4">
+
+        <!-- feature 1 -->
+         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 border rounded shadow-sm h-100" style="transition: 0.3s;" onmouseover="this.style.background='#fef6e4'" onmouseout="this.style.background='white'">
+                <i class="fa-solid fa-handshake-angle fa-3x mb-3 text-warning"></i>
+                <h5 class="fw-bold">Trusted & Transparent</h5>
+                <p>Every donation is tracked and managed by our verified team.</p>
+            </div>
+         </div>
+
+         <!-- feature 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 border rounded shadow-sm h-100" style="transition: 0.3s;" onmouseover="this.style.background='#fef6e4'" onmouseout="this.style.background='white'">
+                <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                <h5 class="fw-bold">Real-Time Analytics</h5>
+                <p>Track donations, inventory and volunteer engagement live.</p>
+            </div>
+         </div>
+
+         <!-- feature 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 border rounded shadow-sm h-100" style="transition: 0.3s;" onmouseover="this.style.background='#fef6e4'" onmouseout="this.style.background='white'">
+                <i class="fas fa-user-friends fa-3x mb-3 text-success"></i>
+                <h5 class="fw-bold">Active Volunteer Network</h5>
+                <p>Over 100+ volunteers across India ready to serve and support.</p>
+            </div>
+         </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,60 @@
+<%- include("partials/header") %>
+
+<div class="container mt-1" style="min-height: 100vh;">
+  <div class="card p-4 shadow-sm rounded-4" style="max-width: 700px; margin: auto;">
+    <h2 class="mb-4 text-center" style="color: #d39e00;">Edit Volunteer</h2>
+
+    <form action="/volunteer/<%= volunteer._id %>?_method=PUT" method="POST">
+
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" name="name" class="form-control" value="<%= volunteer.name %>" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-control" value="<%= volunteer.email %>" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="text" name="phone" class="form-control" value="<%= volunteer.phone %>" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input type="text" name="location" class="form-control" value="<%= volunteer.location %>" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Team Name</label>
+        <input type="text" name="teamName" class="form-control" value="<%= volunteer.teamName %>" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Past Events</label>
+        <input type="text" name="pastEvents" class="form-control" value="<%= volunteer.pastEvents %>" />
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="available" id="availableCheck"
+          <%= volunteer.available ? "checked" : "" %> />
+        <label class="form-check-label" for="availableCheck">Available for Volunteering</label>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="policyCheck" required />
+        <label class="form-check-label" for="policyCheck">
+          I agree to the terms and privacy policy
+        </label>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning px-4">Update Volunteer</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<%- include("partials/footer") %>

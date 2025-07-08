@@ -1,0 +1,87 @@
+<%- include("partials/header") %>
+
+</head>
+<body class="bg-light">
+    <div class="container mt-2" style="max-width: 800px;">
+    <div class="card shadow-sm p-4 rounded-4">
+    <h2 class="mb-4 text-center" style="color:#dc3545">Make a Donation</h2>
+
+    <form class="border rounded p-5 shadow bg-light" action="/donation" method="POST">
+
+  <div class="mb-4">
+    <label  for="itemDonated">Would you like to donate?</label>
+    <select name="itemDonated" class="form-select" required onchange="handleItemChange(this)">
+      <option selected>Select...</option>
+      <option value="money">Money</option>
+      <option value="clothes">Clothes</option>
+      <option value="food">Food</option>
+      <option value="books">Books</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="mb-4" id="otherItemContainer" style="display: none;">
+    <label for="otherItem">Please specify the item</label>
+    <input type="text" name="otherItem" id="otherItem" class="form-control" placeholder="Enter item name" />
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" class="form-control"/>
+  </div>
+
+    <div class="col-md-6">
+    <label for="date">Date</label>
+    <input type="date" name="date" class="form-control"/>
+  </div>
+  </div>
+
+  <div class="mb-4">
+    <label  for="notes">Additional Notes</label>
+    <textarea name="notes" rows="3" class="form-control" placeholder="Any message or details..."></textarea>
+  </div>
+
+  </div>
+  <div class="col-md-6 mt-3 mt-md-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="policyCheck">
+      <label class="form-check-label" for="policyCheck">
+        I agree to the terms and privacy policy
+      </label>
+    </div>
+  </div>
+  </div>
+  <div class="text-center mb-4">
+    <button type="submit" class="btn btn-danger px-4 ">Submit</button>
+ </div>
+</form>
+
+<script>
+    function handleItemChange(selectElement){
+        const otherField=document.getElementById("otherItemContainer");
+        if(selectElement.value==="other"){
+            otherField.style.display="block";
+        }
+        else{
+            otherField.style.display="none";
+            document.getElementById("otherItem").value="";
+        }
+    }
+</script>
+</div>
+</div>
+
+    
+
+
+
+
+
+<%- include("partials/footer") %>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

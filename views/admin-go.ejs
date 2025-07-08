@@ -1,0 +1,93 @@
+<%- include("partials/header") %>
+
+
+<div class="container mt-2" data-aos="fade-up">
+    <h2 class="text-center mb-4 fw-bold" style="font-family: 'Segoe UI', sans-serif; color:#333; margin-top:20px !important">
+        Welcome to Admin Dashboard
+    </h2>
+    <div class="row text-center mb-5">
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center border-success border-4" data-aos="zoom-in">
+                <div class="card-body">
+                    <h5 class="card-title">Donations</h5>  
+                    <p class="display-6 fw-bold"><%= donationCount %></p>              
+                </div>
+            </div>
+        </div>
+
+    <!-- <div class="row text-center mb-5"> -->
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center border-info border-4" data-aos="zoom-in">
+                <div class="card-body">
+                    <h5 class="card-title">Inventory</h5>  
+                    <p class="display-6 fw-bold"><%= inventoryCount %></p>              
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center border-warning border-4" data-aos="zoom-in">
+                <div class="card-body">
+                    <h5 class="card-title">Volunteers</h5>  
+                    <p class="display-6 fw-bold"><%= volunteerCount %></p>              
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card stat-card text-center border-danger border-4" data-aos="zoom-in">
+                <div class="card-body ">
+                    <h5 class="card-title">Users</h5>  
+                    <p class="display-6 fw-bold"><%= userCount %></p>              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics chart -->
+    <div class="bg-white stat-card shadow p-4 rounded mb-5" data-aos="fade-up">
+        <h4 class="mb-4 text-center fw-semibold">Donation & Inventory Analytics</h4>
+        <canvas id="analyticsChart" height="100"></canvas>
+
+    <div class="d-flex justify-content-center flex-wrap mt-5 gap-4" style="gap: 150px !important;">
+        <a href="/admin/donations" class="btn btn-outline-success mx-2">View Donations</a>
+        <a href="/admin/inventory" class="btn btn-outline-info mx-2">View Inventory</a>
+        <a href="/admin/volunteers" class="btn btn-outline-warning mx-2">View Volunteers</a>
+        <a href="/admin/users" class="btn btn-outline-danger mx-2">View Users</a>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
+    <!--  -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('analyticsChart').getContext('2d');
+  const analyticsChart= new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Donations', 'Inventory', 'Volunteers', 'Users'],
+      datasets: [{
+        label: 'Counts',
+        data: [<%= donationCount %>,<%= inventoryCount %>,<%= volunteerCount %>,<%= userCount %>],
+        backgroundColor:['#28a745', '#17a2b8', '#ffc107', '#dc3545'],
+        borderRadius:5
+      }]
+    },
+    options: {
+      responsive:true,
+      plugins:{
+        legend:{
+            display:false
+        },
+        tooltip:{
+            callbacks:{
+                label:function(context){
+                    return `Total: ${context.raw}`;
+                }
+            }
+        }
+      }
+    }
+  });
+</script>

@@ -1,0 +1,38 @@
+
+
+<%- include("partials/header") %>
+
+<div class="container mt-2">
+    <h2 class="mb-4 text-center">Inventory List</h2>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Status</th>
+                <th>Added By</th>
+                <th>Email</th>
+                <!-- <th>Date</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <% inventories.forEach(inv => { %>
+                <tr>
+                    <td><%= inv.item %></td>
+                    <td><%= inv.quantity %></td>
+                    <td><%= inv.status %></td>
+                    <td><%= inv.addedBy ? inv.addedBy.name : "N/A" %></td>
+                    <td><%= inv.addedBy ? inv.addedBy.email : "N/A" %></td>
+
+                    <td><a href="/inventory/<%=inv._id %>/edit" class="btn btn-sm " style="background-color: #43aa8b; color:white">Edit</a></td>
+                    <td><form method="POST" action="/inventory/<%= inv._id %>?_method=DELETE"  onsubmit="return confirm('Are you aure you want to delete this item?');">
+                        <button type="submit" class="btn btn-ngo-delete btn-sm btn-danger">Delete</button></form>
+                    </td>
+                    
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("partials/footer") %>
